@@ -1,0 +1,22 @@
+<!-- Budget -->
+<section class="set-budget-container">
+  <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+    <h5>Update Budget</h5>
+    <div class="total-amount-container">
+      <input
+        type="number"
+        id="total-amount"
+        name="totalAmount"
+        required
+        [(ngModel)]="newBudget"
+        placeholder="Enter Total Amount"
+      />
+      <button class="submit" id="total-amount-button" type="submit">
+        Submit
+      </button>
+    </div>
+    <div *ngIf="errorMessage" class="invalid-feedback">
+      {{ errorMessage }}
+    </div>
+  </form>
+</section>

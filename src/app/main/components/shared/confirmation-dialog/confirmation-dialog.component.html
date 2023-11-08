@@ -1,0 +1,20 @@
+<div class="confirmation-dialog-container">
+  <div class="confirmation-dialog-content">{{ data.message }}</div>
+  <div class="confirmation-dialog-actions" align="end">
+    <button
+      mat-button
+      class="confirmation-dialog-button cancel"
+      (click)="closeDialog()"
+    >
+      Cancel
+    </button>
+    <button
+      mat-button
+      [mat-dialog-close]="true"
+      class="confirmation-dialog-button delete"
+      cdkFocusInitial
+    >
+      Delete
+    </button>
+  </div>
+</div>

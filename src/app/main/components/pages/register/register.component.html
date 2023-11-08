@@ -1,0 +1,116 @@
+<section>
+  <div class="container">
+    <div class="form-container">
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <h3>Register here</h3>
+        <p>A better way to track your money!!</p>
+        <div class="user__details">
+          <div class="input__box">
+            <span class="details">First Name</span>
+            <input
+              type="text"
+              placeholder="First name"
+              formControlName="firstName"
+              required
+            />
+            <div
+              *ngIf="submitted && f['firstName'].errors"
+              class="invalid-feedback"
+            >
+              <span *ngIf="f['firstName'].errors['required']"
+                >Firstname is required</span
+              >
+            </div>
+          </div>
+          <div class="input__box">
+            <span class="details">Last name</span>
+            <input
+              type="text"
+              placeholder="Last name"
+              formControlName="lastName"
+              required
+            />
+            <div
+              *ngIf="submitted && f['lastName'].errors"
+              class="invalid-feedback"
+            >
+              <span *ngIf="f['lastName'].errors['required']"
+                >Lastname is required</span
+              >
+            </div>
+          </div>
+          <div class="input__box">
+            <span class="details">Email</span>
+            <input
+              type="email"
+              placeholder="E-mail"
+              formControlName="email"
+              required
+            />
+            <div
+              *ngIf="submitted && f['email'].errors"
+              class="invalid-feedback"
+            >
+              <span *ngIf="f['email'].errors['required']"
+                >E-mail is required</span
+              >
+            </div>
+          </div>
+          <div class="input__box">
+            <span class="details">Phone Number</span>
+            <input
+              type="number"
+              placeholder="Phone number"
+              formControlName="phoneNumber"
+              required
+            />
+            <div
+              *ngIf="submitted && f['phoneNumber'].errors"
+              class="invalid-feedback"
+            >
+              <span *ngIf="f['phoneNumber'].errors['required']"
+                >Phonenumber is required</span
+              >
+            </div>
+          </div>
+          <div class="input__box">
+            <span class="details">Password</span>
+            <input
+              type="password"
+              placeholder="Passoword"
+              formControlName="password"
+              required
+            />
+            <div
+              *ngIf="submitted && f['password'].errors"
+              class="invalid-feedback"
+            >
+              <span *ngIf="f['password'].errors['required']"
+                >Password is required</span
+              >
+            </div>
+          </div>
+          <div class="input__box">
+            <span class="details">Confirm Password</span>
+            <input
+              type="password"
+              placeholder="Confirm password"
+              formControlName="confirmPassword"
+              required
+            />
+            <div *ngIf="submitted && f['confirmPassword'].errors" class="invalid-feedback">
+              <span *ngIf="f['confirmPassword'].errors['required']">Confirm password is required</span>
+              <span *ngIf="f['confirmPassword'].errors['MatchPassword']">Passwords do not match</span>
+            </div>
+          </div>
+        </div>
+        <button class="register__btn" type="submit" value="">Register</button>
+        <div class="footer">
+          <p class="message">
+            Already registered?<a routerLink="/login"> Sign in</a>
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

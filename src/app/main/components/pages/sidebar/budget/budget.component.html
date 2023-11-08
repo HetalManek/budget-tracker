@@ -1,0 +1,73 @@
+<div class="wrapper">
+  <div class="container">
+    <!-- Output -->
+    <div class="row">
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col">
+                <h3 class="card-title">Total Budget</h3>
+                <span class="card-value">{{ budget.totalAmount }}</span>
+              </div>
+              <div class="mr-20">
+                <div class="icon">
+                  <i class="fas fa-file-invoice-dollar"></i>
+                </div>
+              </div>
+            </div>
+            <p class="card-info"></p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col">
+                <h3 class="card-title">Total Expenses</h3>
+                <span class="card-value">{{ totalExpenses }}</span>
+              </div>
+              <div class="mr-20">
+                <div class="icon">
+                  <i class="fas fa-chart-line"></i>
+                </div>
+              </div>
+            </div>
+            <p class="card-info"></p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col">
+                <h3 class="card-title">Remaining Balance</h3>
+                <span class="card-value">{{ remainingBalance }}</span>
+              </div>
+              <div class="mr-20">
+                <div class="icon">
+                  <i class="fas fa-balance-scale"></i>
+                </div>
+              </div>
+            </div>
+            <p class="card-info"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-container">
+      <div class="">
+        <app-set-budget-form
+          (budgetUpdated)="updateBudget($event)"
+        ></app-set-budget-form>
+        <app-add-expense-form
+          [remainingBalance]="remainingBalance"
+        ></app-add-expense-form>
+      </div>
+      <app-expense-list></app-expense-list>
+    </div>
+  </div>
+</div>

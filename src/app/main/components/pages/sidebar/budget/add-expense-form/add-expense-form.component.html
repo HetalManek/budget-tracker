@@ -1,0 +1,20 @@
+<!-- Expenditure -->
+<section class="user-amount-container">
+  <form [formGroup]="expenseForm" (ngSubmit)="onSubmitExpense()">
+    <h5>Add expense to list</h5>
+    <input
+      type="text"
+      formControlName="productTitle"
+      placeholder="Enter title of product"
+    />
+    <input
+      type="number"
+      formControlName="userAmount"
+      placeholder="Enter cost of product"
+    />
+    <button type="submit" class="submit" id="check-amount">Add expense</button>
+  </form>
+  <div *ngIf="insufficientBalance" class="invalid-feedback">
+    Insufficient balance!!
+  </div>
+</section>

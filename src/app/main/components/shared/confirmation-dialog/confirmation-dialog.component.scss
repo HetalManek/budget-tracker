@@ -1,0 +1,50 @@
+.confirmation-dialog-container {
+    max-width: 400px;
+    padding: 10px !important;
+    background-color: #ffffff; /* Set background color */
+    border-radius: 8px; /* Optional: Add rounded corners */
+  }
+  
+  .confirmation-dialog-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .confirmation-dialog-content {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .confirmation-dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .confirmation-dialog-button {
+    margin-left: 10px;
+  }
+
+  .confirmation-dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .confirmation-dialog-button {
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 5px 15px;
+    color: black;
+
+    .delete-btn{
+        background-color: darkgray;
+    }
+
+    .cancel-btn{
+        background-color: white;
+    }
+  }
+    

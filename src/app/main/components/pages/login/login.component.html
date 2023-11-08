@@ -1,0 +1,59 @@
+<section>
+  <div class="container">
+    <div class="form-container">
+      <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+        <div class="header">
+          <h5>Login to BudgetTracker.</h5>
+          <p>A better way to track your money!!</p>
+        </div>
+        <div class="user__details">
+          <div class="input__box">
+            <span class="details">E-mail</span>
+            <input
+              type="email"
+              name="email"
+              placeholder="E-mail"
+              [(ngModel)]="user.email"
+              #email="ngModel"
+              required
+            />
+            <div
+              *ngIf="loginForm.submitted && email.invalid"
+              class="invalid-feedback"
+            >
+              <span *ngIf="email.errors!['required']">E-mail is required</span>
+            </div>
+          </div>
+          <div class="input__box">
+            <span class="details">Password</span>
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              required
+              [(ngModel)]="user.password"
+              #password="ngModel"
+            />
+            <div
+              *ngIf="loginForm.submitted && password.invalid"
+              class="invalid-feedback"
+            >
+              <span *ngIf="password.errors!['required']"
+                >Password is required</span
+              >
+            </div>
+          </div>
+        </div>
+        <button class="register__btn" type="submit">Login</button>
+        <div class="footer">
+          <p class="message">
+            Forgot your password?<a routerLink="/forgot-password">Reset here</a>
+          </p>
+          <p class="message">
+            New User?<a routerLink="/register">Register Now</a>
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

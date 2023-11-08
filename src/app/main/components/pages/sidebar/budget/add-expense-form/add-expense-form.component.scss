@@ -1,0 +1,42 @@
+@import '../budget-tracker/src/sass/import.scss';
+
+// Hierarchical Structure
+.user-amount-container {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  border:1px solid #ddd;
+  form {
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+      font-size: 1.5*$font-size;
+      color: black;
+      margin-bottom: 10px;
+    }
+
+    input {
+      font-size: $font-size;
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button.submit {
+      font-size: 1.2*$font-size;
+      background-color: $orange-color;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        // background-color: #45a049;
+      }
+    }
+  }
+}

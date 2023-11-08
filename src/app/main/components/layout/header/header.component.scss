@@ -1,0 +1,109 @@
+@import "../../../../../sass/import.scss";
+
+.header-main {
+  background-color: $black-bg-color;
+  color: $header-text-color;
+  padding: 10px 0;
+  z-index: 9999;
+  position: fixed;
+  width: 100%;
+
+  .container {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .navbar {
+      display: flex;
+      align-items: center;
+
+      .logo {
+        margin-right: 20px;
+
+        img {
+          max-width: 100px;
+          height: auto;
+        }
+        a {
+          font-size: $twenty-five;
+          font-weight: 600;
+          background: linear-gradient(
+            to right,
+            #f36021,
+            #ff6600,
+            #f674f6,
+            #eedd44
+          );
+          -webkit-text-fill-color: transparent;
+          -webkit-background-clip: text;
+        }
+      }
+
+      ul {
+        list-style: none;
+
+        li {
+          display: inline-block;
+          margin-right: 20px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          a {
+            text-decoration: none;
+            color: $nav-text-color;
+
+            &:hover {
+              color: lighten($nav-text-color, 20%);
+            }
+          }
+
+          ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: $nav-background-color;
+
+            li {
+              width: 200px;
+              &:hover {
+                background-color: darken($nav-background-color, 10%);
+              }
+            }
+          }
+
+          &:hover > ul {
+            display: block;
+          }
+        }
+      }
+    }
+
+    .btn-container {
+      .log-out-btn {
+        background: transparent;
+        border: 2px solid $orange-color;
+        color: orangered;
+        padding: 5px 25px;
+        font-size: $sixteen;
+        line-height: 26px;
+        border-radius: $border-radius;
+        font-weight: 500;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 10px;
+    position: relative;
+    
+    .navbar {
+      .logo {
+        margin-right: 10px;
+      }
+    }
+  }
+}

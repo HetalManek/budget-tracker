@@ -1,0 +1,35 @@
+<section class="expense-list-layout">
+  <h2>Expenses</h2>
+  <div class="searchbar-layout">
+    <form>
+      <input
+        type="search"
+        [(ngModel)]="searchTerm"
+        placeholder="Search expenses"
+        (keyup)="filter()"
+        class="search-input"
+        name="searchTerm"
+      />
+    </form>
+  </div>
+
+  <ng-container *ngIf="filteredExpenses.length > 0; else noExpenses">
+    <div
+      *ngFor="let expense of filteredExpenses; let i = index"
+      class="expense-item"
+    >
+      <span>{{ expense.productTitle }} </span>
+      <div>
+        <span>{{ expense.userAmount }} </span>
+        <button (click)="deleteExpense(expense.id)">
+          <i class="fa fa-trash"></i>
+        </button>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-template #noExpenses>
+    <p *ngIf="expensesList.length > 0">No matching expenses found.</p>
+    <p *ngIf="expensesList.length === 0">No expenses available.</p>
+  </ng-template>
+</section>

@@ -1,0 +1,84 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+@import "../src/sass/import.scss";
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+* {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+//common classes
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+hr {
+  overflow: visible;
+  box-sizing: content-box;
+  height: 0;
+}
+
+h1,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-top: 10px;
+  margin-bottom: 1rem;
+}
+
+.invalid-feedback {
+  display: block;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+/* Styles for success Toastr notifications */
+.toast-success {
+  background-color: green;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 5px 6px 10px 4px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  text-align: left;
+  position: fixed;
+  top: 40px;
+  right: 30px;
+  animation: slide-in 0.3s ease-out forwards;
+  z-index: 9999;
+}
+
+/* Styles for error Toastr notifications */
+.toast-error {
+  background-color: #d8000c;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 5px 6px 10px 4px rgba(0, 0, 0, 0.1);
+  color: white;
+  max-width: 400px;
+  text-align: left;
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  animation: slide-in 0.3s ease-out forwards;
+  z-index: 9999;
+}
+

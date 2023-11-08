@@ -1,0 +1,84 @@
+// Variables
+$font-size: 16px;
+$white-color: #333;
+$bg-color: #f4f4f4;
+$button-bg-color: #e74c3c;
+@import "../../../../../../../sass/import.scss";
+
+.expense-list-layout {
+  background: white;
+  border: 1px solid lightgray;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  border: 1px solid lightgrey;
+  margin-right: 15px;
+
+  .searchbar-layout {
+    .search-input {
+      width: 100%;
+      border: 1px solid lightgrey;
+      margin: 10px 0px;
+      padding: 10px;
+      border-radius: $border-radius;
+    }
+    .search-btn {
+      padding: 10px 20px;
+      border-radius: $border-radius;
+      margin-left: 5px;
+      background: orangered;
+      border: 1px solid lightgray;
+      color: white;
+    }
+  }
+  h2 {
+    font-size: 1.5rem;
+    color: black;
+    margin-bottom: 10px;
+  }
+
+  .no-expenses {
+    font-size: $font-size;
+    color: $white-color;
+    margin: 20px 0;
+  }
+
+  .expense-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: $bg-color;
+    border-radius: $border-radius;
+
+    span {
+      font-size: $font-size;
+      color: black;
+    }
+
+    button {
+      font-size: $font-size;
+      color: black;
+      border: none;
+      padding: 8px 16px;
+      border-radius: $border-radius;
+      cursor: pointer;
+
+      i {
+        margin-right: 5px; // Add some space between the icon and text
+      }
+
+      &:hover {
+        background-color: darken(lightgrey, 10%);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .expense-list-layout {
+    margin-right: 0px;
+  }
+}

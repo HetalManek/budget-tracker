@@ -1,0 +1,110 @@
+// Variables
+@import "../../../../../../sass/import.scss";
+
+// Wrapper styles
+// Variables
+@import "../../../../../../sass/import.scss";
+
+// Wrapper styles
+.wrapper {
+  width: 100%;
+  font-size: $font-size;
+
+  .container {
+    width: 100%;
+
+    .sub-container {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 40% 60%;
+      gap: 1em;
+      
+      // Responsive styles for screens with a maximum width of 768px (typical mobile devices)
+      @media screen and (max-width: 768px) {
+        grid-template-columns: 100%; // Switch back to a single column layout for mobile
+      }
+    }
+  }
+}
+
+
+//statistics card styles
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+
+  .col {
+    flex: 0 0 calc(33.3333% - 1px);
+    margin-bottom: 20px;
+
+    @media screen and (max-width: 768px) {
+      width: 150px;
+    }
+
+    @media screen and (max-width: 480px) {
+      flex: 100%;
+    }
+
+    .card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 25px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+      .bg-color-card1 {
+        background-color: #ffd9c0;
+      }
+      .bg-color-card2 {
+        background-color: #8cc0de;
+      }
+      .bg-color-card3 {
+        background-color: #cceebc;
+      }
+      .card-body {
+        padding: 20px;
+
+        .row {
+          .mr-20 {
+            margin-right: 20px;
+          }
+          .icon {
+            background-color: $orange-color;
+            color: #fff;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          }
+          .col {
+            flex: 1;
+
+            .card-title {
+              font-size: $twenty;
+              margin-bottom: 10px;
+            }
+
+            .card-value {
+              font-size: 21px;
+              font-weight: bold;
+              color: #333;
+            }
+          }
+        }
+
+        .card-info {
+          font-size: $fourteen;
+          color: #565555;
+
+          .info-icon {
+            color: #dc3545;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}
